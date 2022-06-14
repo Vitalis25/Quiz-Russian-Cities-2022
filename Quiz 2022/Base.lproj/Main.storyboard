@@ -289,19 +289,54 @@
             </objects>
             <point key="canvasLocation" x="1286.9565217391305" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="CC6-pS-f5h">
             <objects>
-                <viewController id="8zt-N8-EgN" sceneMemberID="viewController">
+                <viewController id="8zt-N8-EgN" customClass="ResultViewController" customModule="Quiz_2022" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vvv-fI-QzL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="6Rk-fh-YOl">
+                                <rect key="frame" x="20" y="76" width="374" height="690"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ISO-e3-kbW">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="347.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmm-Sy-VOz">
+                                        <rect key="frame" x="128.5" y="368.5" width="117" height="163"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vod-NE-d0Z">
+                                        <rect key="frame" x="163" y="552.5" width="48" height="137.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="f7s-0x-nMS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Rk-fh-YOl" firstAttribute="top" secondItem="f7s-0x-nMS" secondAttribute="top" constant="20" id="32i-cJ-q4v"/>
+                            <constraint firstItem="6Rk-fh-YOl" firstAttribute="leading" secondItem="f7s-0x-nMS" secondAttribute="leading" constant="20" id="88H-JI-xwx"/>
+                            <constraint firstItem="6Rk-fh-YOl" firstAttribute="centerY" secondItem="Vvv-fI-QzL" secondAttribute="centerY" id="Laj-y0-cXG"/>
+                            <constraint firstItem="f7s-0x-nMS" firstAttribute="trailing" secondItem="6Rk-fh-YOl" secondAttribute="trailing" constant="20" id="PVQ-CA-Ted"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2x4-rd-g35"/>
+                    <navigationItem key="navigationItem" id="2x4-rd-g35">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="CaZ-na-nS7">
+                            <connections>
+                                <segue destination="wfv-Vq-s2W" kind="unwind" unwindAction="unwind:" id="sVq-fm-lT3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6L9-8l-lg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wfv-Vq-s2W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2206" y="110"/>
         </scene>
