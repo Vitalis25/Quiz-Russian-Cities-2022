@@ -27,18 +27,48 @@ enum ExpertType: String {
         }
     }
     
+    var name: String {
+        switch self {
+        case .homester:
+            return "домосед"
+        case .traveller:
+            return "путешественник"
+        case .tourist:
+            return "турист"
+        case .student:
+            return "студент истфака"
+        case .guide:
+            return "гид-переводчик"
+        }
+    }
+    
+    var image: String {
+        switch self {
+        case .homester:
+            return "homester"
+        case .traveller:
+            return "traveller"
+        case .tourist:
+            return "tourist"
+        case .student:
+            return "student"
+        case .guide:
+            return "guide"
+        }
+    }
+    
     var definition: String {
         switch self {
         case .homester:
-            return "Вы домосед! Пора уже увидеть Россию воочию!"
+            return "Пора уже увидеть Россию воочию!"
         case .traveller:
-            return "Вы путешественник! Даёшь спонтанные приключения по городам и весям России!"
+            return "Даёшь спонтанные приключения по городам и весям России!"
         case .tourist:
-            return "Вы турист! У Вас всегда есть план пешего тура по российскому городу с указанием достопримечательностей!"
+            return "У Вас всегда есть план пешего тура по российскому городу с указанием достопримечательностей!"
         case .student:
-            return "Вы студент истфака! Краеведение родных просторов всё больше захватывает Вас!"
+            return "Краеведение родных просторов всё больше захватывает Вас!"
         case .guide:
-            return "Вы гид-переводчик! Знание городских историй и традиций регионов России на 5+!"
+            return "Знание городских историй и традиций регионов России на 5+!"
         }
     }
 }
